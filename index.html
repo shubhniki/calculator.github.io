@@ -1,0 +1,126 @@
+<html>
+<head>
+
+         
+<title>Calculator</title>
+ <style type="text/css">
+ #div{
+   background-color:silver;
+   border-radius:24px;
+  text-align:center;
+   height:400px;
+   width:350;
+  // display:inlign-block;
+  color:black;
+   border:5px solid grey;
+    }
+    #input{
+        margin: 5px right;
+       height:50px;
+       width:350px;
+         text-align:right;
+         border-radius:20px;
+     background-color:silver;
+      font-size:25px;
+      padding:5px right;
+          }
+     .input{
+      
+            height:50px;
+            width:50px;
+            margin:10px;
+            font-size:25px;
+            border-radius:12px;
+            background-color: grey;
+           
+           }
+      
+ </style>
+</head>
+<body>
+ <div id="div">
+  <input type="text" id="input">
+   <input type="button" value="AC" class="input" onclick="cls()">
+   <input type="button" value="%" class="input" onclick="val('%')">
+  <!-- <input type="button" value="b" class="input" onclick="delone()">-->
+<button class="input" onclick="delone()"><img src="backspace.png" width="22px" style="background-color:grey"></button>   
+   <input type="button" value="/" class="input" onclick="val('/')">
+   <input type="button" value="7" class="input" onclick="val('7')">
+   <input type="button" value="8" class="input" onclick="val('8')">
+   <input type="button" value="9" class="input" onclick="val('9')">
+   <input type="button" value="×" class="input" onclick="val('*')">
+   <input type="button" value="4" class="input" onclick="val('4')">
+   <input type="button" value="5" class="input" onclick="val('5')">
+   <input type="button" value="6" class="input" onclick="val('6')">
+   <input type="button" value="-" class="input" onclick="val('-')">
+   <input type="button" value="1" class="input" onclick="val('1')">
+   <input type="button" value="2" class="input" onclick="val('2')">
+   <input type="button" value="3" class="input" onclick="val('3')">
+   <input type="button" value="+" class="input" onclick="val('+')">
+   <input type="button" value="00" class="input" onclick="val('00')">
+   <input type="button" value="0" class="input" onclick="val('0')">
+   <input type="button" value="." class="input" onclick="val('.')">
+   <input type="button" value="=" class="input" onclick="result()">
+   
+ </div>
+ <script type="text/javascript">
+ var a;
+ 
+ a=document.getElementById("input");
+ if(a.value=="")
+             a.value=0;
+  function val(num)
+     {
+       var a;
+	   a=document.getElementById("input");
+	  
+	   if(a.value==0)
+	   {
+	     a=document.getElementById("input");
+           a.value=eval(0+num);		 
+	   }
+	   else
+	   {
+	        a=document.getElementById("input");
+         a.value+=num;
+	   }
+      
+     /*   if(num>0 || num<0)
+        {
+         a.value=eval(a.value+num);
+        }
+      else
+         {
+         a.value=eval(a.value);
+         }*/
+  
+      }
+   function result()
+      {
+    var a=document.getElementById("input")
+   a.value=eval(a.value)
+        }
+        
+    function cls()
+           {
+        var a=document.getElementById("input");
+        a.value="";
+        if(a.value=="")
+          a.value=0;
+       
+           }
+           
+   function delone()
+                   {
+               var a=document.getElementById("input");
+            //   var b=a.value;
+             //  b=b.slice(0,-1)
+             a.value=a.value.slice(0,-1)
+             if(a.value=="")
+             a.value=0;
+             //  a.value=b;  
+              
+                }
+ </script>
+</body>
+</html>
