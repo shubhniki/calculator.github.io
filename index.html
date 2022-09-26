@@ -61,17 +61,17 @@ exampleModal.addEventListener('show.bs.modal', event => {
       
  </style>
 </head>
-<body class="d-flex justify-content-center">
+<body >
 	
-	<button type="button" class="btn btn-primary mt-5" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Calculate something</button>
+	<button type="button" class="btn btn-primary mt-5 ms-0 me-0 mx-auto" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Calculate something</button>
 	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <h5 class="modal-title text-center" id="exampleModalLabel">Calculator</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body ">
+      <div class="modal-body d-flex justify-content-center ">
  <div id="div">
   <input type="text" id="input">
    <input type="button" value="AC" class="input" onclick="cls()">
