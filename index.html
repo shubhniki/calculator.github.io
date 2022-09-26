@@ -32,7 +32,7 @@ exampleModal.addEventListener('show.bs.modal', event => {
    background-color:silver;
    border-radius:24px;
   text-align:center;
-   height:400px;
+   height:410px;
    width:360px;
   // display:inlign-block;
   color:black;
@@ -61,9 +61,9 @@ exampleModal.addEventListener('show.bs.modal', event => {
       
  </style>
 </head>
-<body>
+<body class="d-flex justify-content-center">
 	
-	<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Calculate something</button>
+	<button type="button" class="btn btn-primary mt-5" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Calculate something</button>
 	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -71,7 +71,7 @@ exampleModal.addEventListener('show.bs.modal', event => {
         <h5 class="modal-title" id="exampleModalLabel">New message</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body ">
  <div id="div">
   <input type="text" id="input">
    <input type="button" value="AC" class="input" onclick="cls()">
